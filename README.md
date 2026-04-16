@@ -1,16 +1,79 @@
-# React + Vite
+# Password Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, secure password generator built with React and Vite. Create strong, random passwords with customizable options in seconds.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+✨ **Easy Password Generation** - Generate secure passwords with just one click
 
-## React Compiler
+🔐 **Customizable Options** - Choose character types:
+- Uppercase letters (A-Z)
+- Lowercase letters (a-z)
+- Numbers (0-9)
+- Special symbols (!@#$%^&*)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+📊 **Real-time Strength Indicator** - Visual feedback on password strength:
+- Weak
+- Medium
+- Strong
+- Very Strong
 
-## Expanding the ESLint configuration
+🎚️ **Adjustable Length** - Generate passwords from 6 to 32 characters
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+📋 **Password History** - Keep track of the last 10 generated passwords
+
+📋 **Copy to Clipboard** - Instantly copy passwords to your clipboard
+
+🌙 **Dark Mode Support** - Easy on the eyes with dark mode theme
+
+🔒 **100% Private** - All processing happens locally in your browser. No data is saved or transmitted.
+
+## How to Use
+
+1. **Set Password Length** - Use the slider to choose your desired password length (6-32 characters)
+
+2. **Select Character Types** - Check the boxes for the types of characters you want to include
+
+3. **Generate Password** - Click the refresh button to generate a new password
+
+4. **Copy Password** - Click "Copiar" button to copy the password to your clipboard
+
+5. **Check History** - View and reuse your last 10 generated passwords
+
+## Tech Stack
+
+- **React** - UI library
+- **Vite** - Build tool and dev server
+- **Tailwind CSS** - Utility-first CSS framework
+- **React Icons** - Icon library
+
+## Installation
+
+```bash
+npm install
+```
+
+## Development
+
+```bash
+npm run dev
+```
+
+The application will start at `http://localhost:5173`
+
+## Build
+
+```bash
+npm run build
+```
+
+## Security Notes
+
+- All password generation happens entirely in your browser
+- No data is sent to any server
+- Passwords are not stored permanently
+- History is cleared when you refresh the page
+
+## License
+
+MIT
