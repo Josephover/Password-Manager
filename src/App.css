@@ -1,88 +1,130 @@
-/* Slider styles for range input */
-.slider::-webkit-slider-thumb {
+/* =====================
+   Slider Styles
+   ===================== */
+.slider-dark::-webkit-slider-thumb {
   appearance: none;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #3b82f6, #9333ea);
+  background: #06b7db;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 8px rgba(6, 183, 219, 0.4);
   border: 2px solid white;
-  transition: transform 0.2s;
+  transition: all 0.2s ease;
 }
 
-.slider::-webkit-slider-thumb:hover {
+.slider-dark::-webkit-slider-thumb:hover {
   transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(6, 183, 219, 0.6);
 }
 
-.slider::-moz-range-thumb {
+.slider-dark::-moz-range-thumb {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #3b82f6, #9333ea);
+  background: #06b7db;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 8px rgba(6, 183, 219, 0.4);
   border: 2px solid white;
-  transition: transform 0.2s;
+  transition: all 0.2s ease;
 }
 
-.slider::-moz-range-thumb:hover {
+.slider-dark::-moz-range-thumb:hover {
   transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(6, 183, 219, 0.6);
 }
 
-/* Checkbox styles */
-input[type="checkbox"] {
-  accent-color: #3b82f6;
+/* =====================
+   Scrollbar
+   ===================== */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in {
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-/* Smooth transitions */
-* {
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-}
-
-button {
-  transition: all 0.3s ease;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
+.custom-scrollbar::-webkit-scrollbar-track {
   background: transparent;
 }
 
-::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* =====================
+   Checkbox Styling
+   ===================== */
+input[type="checkbox"] {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #d1d5db;
   border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: white;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+input[type="checkbox"]:checked {
+  background: #1f2937;
+  border-color: #1f2937;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="white" d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 11-1.06-1.06l7.25-7.25a.75.75 0 011.06 0Z"/><path fill="white" d="M2.22 9.28a.75.75 0 001.06 1.06L6.5 6.56l5.72 5.72a.75.75 0 101.06-1.06L7.56 5.5 2.22 10.84a.75.75 0 01-1.06-1.06l7.25-7.25a.75.75 0 111.06 1.06L2.22 9.28Z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
 }
 
-/* Dark mode scrollbar */
-.dark ::-webkit-scrollbar-thumb {
-  background: #4b5563;
+input[type="checkbox"]:hover {
+  border-color: #6b7280;
 }
 
-.dark ::-webkit-scrollbar-thumb:hover {
-  background: #6b7280;
+input[type="checkbox"]:focus {
+  outline: 2px solid rgba(6, 183, 219, 0.3);
+  outline-offset: 2px;
+}
+
+/* =====================
+   Text Selection
+   ===================== */
+::selection {
+  background: #06b7db;
+  color: white;
+}
+
+::-moz-selection {
+  background: #06b7db;
+  color: white;
+}
+
+/* =====================
+   Input Focus
+   ===================== */
+input[type="text"]:focus {
+  outline: none;
+}
+
+/* =====================
+   Transitions
+   ===================== */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =====================
+   Responsive
+   ===================== */
+@media (max-width: 640px) {
+  .text-5xl {
+    font-size: 2rem;
+  }
+  
+  .grid-cols-5 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }

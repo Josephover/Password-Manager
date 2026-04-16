@@ -2,8 +2,22 @@
 
 * {
   margin: 0;
-  padding: 0;
+  
   box-sizing: border-box;
+}
+
+/* Aumentar espaciado en elementos de texto */
+p, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+}
+
+button, input, select, textarea {
+  margin: 0.5rem 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.75rem;
 }
 
 body {
@@ -12,4 +26,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
 }
